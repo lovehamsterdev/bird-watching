@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from "./components/common/Button";
+import Heading from "./components/common/Heading";
+import FadeIn from "./components/common/FadeIn";
+import Img from "./components/common/Img";
+import gameImg from "./assets/game_img.png";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FadeIn duration={500}>
+      <Button w="300px">Hello</Button>
+      <Heading>Large heading</Heading>
+      <Heading size="sm">Small heading</Heading>
+      <Img src={gameImg} alt="" />
+    </FadeIn>
   );
 }
 
