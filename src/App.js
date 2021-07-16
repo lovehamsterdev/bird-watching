@@ -1,17 +1,25 @@
-import Button from "./components/common/Button";
-import Heading from "./components/common/Heading";
-import FadeIn from "./components/common/FadeIn";
-import Img from "./components/common/Img";
-import gameImg from "./assets/game_img.png";
+import styled from "styled-components";
+import BirdWatchingGame from "./BirdWatchingGame";
+import GameProvider from "./GameContext";
 
+const AppStyled = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 function App() {
   return (
-    <FadeIn duration={500}>
-      <Button w="300px">Hello</Button>
-      <Heading>Large heading</Heading>
-      <Heading size="sm">Small heading</Heading>
-      <Img src={gameImg} alt="" />
-    </FadeIn>
+    <AppStyled>
+      <GameProvider>
+        <BirdWatchingGame />
+      </GameProvider>
+    </AppStyled>
   );
 }
 
