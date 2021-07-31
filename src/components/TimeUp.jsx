@@ -1,7 +1,7 @@
 import anime from "animejs";
 import { useEffect, useRef, useState } from "react";
 import Heading from "./common/Heading";
-import useTimeout from "../hooks/useInterval";
+import useTimeout from "../hooks/useTimeout";
 
 export default function TimeUp() {
   const ref = useRef();
